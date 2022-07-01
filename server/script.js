@@ -4,8 +4,8 @@ const server = require('http').createServer(app);
 const WebSocket = require('ws');
 const wss = new WebSocket.Server({ server:server });
 wss.on('connection', function connection(ws) {
-console.log('LeetPlayer - Connected!');
-ws.send('Leet-Speler connected');
+console.log('Player Connected!');
+ws.send('Player Connected!');
 ws.on('message', function incoming(message) {
 console.log('received: %s', message);
 wss.clients.forEach(function each(client) {
